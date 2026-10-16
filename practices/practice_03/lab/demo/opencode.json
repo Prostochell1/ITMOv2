@@ -24,7 +24,7 @@
     "local-guide": {
       "description": "Read-only local repository assistant",
       "mode": "primary",
-      "prompt": "{file:../../../../repo-system-A.txt}",
+      "prompt": "{file:repo-system.txt}",
       "steps": 5,
       "permission": {
         "*": "deny",
@@ -34,7 +34,7 @@
     "local-guide-b": {
       "description": "Read-only assistant (B prompt)",
       "mode": "primary",
-      "prompt": "{file:../../../../repo-system-B.txt}",
+      "prompt": "{file:repo-system-b.txt}",
       "steps": 5,
       "permission": {
         "*": "deny",
