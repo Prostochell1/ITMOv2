@@ -1,0 +1,111 @@
+python3 experiment.py --mode baseline --output results/baseline.json
+В данном случае, CI-система будет запускать тесты проекта, если она настроена для выполнения команды `make test`. 
+
+CI-система (Continuous Integration System) обычно запускает тесты при каждом коммите или изменении, чтобы убедиться, что изменения не повредили текущую работу. В данном случае, `make test` предполагается, что это команда, которая запускает тесты проекта.
+
+Если CI-система настроена правильно, она будет выполнять команду `make test`, и тесты будут запускаться автоматически при каждом изменении в коде. Это позволяет быстро выявлять проблемы и убедиться, что изменения не влияют на существующую работу проекта.
+
+Обычно, CI-системы используются для различных языков программирования и проектов, поэтому, в зависимости от используемой CI-системы, может быть использовано разное количество команд для запуска тестов. В данном случае, `make test` предполагается, что это команда для запуска тестов.
+Saved: results/baseline.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode system --output results/system.json
+В предоставленных материалах нет ответа
+Saved: results/system.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode baseline --output results/baseline_t0.8.json
+В данном контексте, CI-система (Continuous Integration) автоматически запускает тесты (make test) при попытке добавления или изменения кода в проекте. Для этого можно использовать различные CI-системы, такие как GitHub Actions, Jenkins, CircleCI и т.д.
+
+Ваш проект использует команду `make test`, которая вызывает тесты. Это означает, что для запуска тестов проекта на CI-системе нужно будет сначала установить зависимости проекта (например, с помощью команды `pip install -r requirements.txt`), а затем вызвать команду `make test`.
+
+Таким образом, CI-система (например, GitHub Actions) будет автоматически запускать команду `make test` при каждом обновлении кода в ветке master/develop. Это позволит быстро обнаруживать и обходить проблемы, которые могут возникнуть из-за неправильных коммитов или модификаций кода.
+
+Для конкретного примера, в проекте можно настроить CI-систему следующим образом:
+
+1. Установить зависимости проекта: `pip install -r requirements.txt`
+2. Вызвать команду для запуска тестов: `make test`
+
+Теперь, чтобы запустить CI-систему на конкретном проекте, нужно будет настроить автоматическую проверку на CI-системе. Например, в GitHub Actions это может выглядеть следующим образом:
+
+```yaml
+# .github/workflows/test.yml
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: make test
+```
+
+Таким образом, каждое изменение в ветке `master` будет автоматически запускать команду `make test` с установленными зависимостями.
+
+Таким образом, CI-система будет выполнять тесты проекта, запуская команду `make test`, чтобы обеспечить стабильность и соответствие
+Saved: results/baseline_t0.8.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode baseline --output results/baseline_t0.8_43.json
+В данном случае, поскольку тесты запускаются с помощью команды `make test`, можно предположить, что CI-система (Continuous Integration система) запускает тесты проекта. Однако для точного ответа нужно знать конкретнуюCI-систему, которую используется для проекта.
+
+CI-системы обычно используют свои собственные конфигурационные файлы и шаблоны для запуска тестов. Каждая CI-система может поддерживать различные команды для запуска тестов, включая `make test`. Вот несколько примеровпопулярных CI-систем, которые могут использовать подобные команды:
+
+1. **GitHub Actions**: Может использовать шаблон `.github/workflows/main.yml` для запуска тестов.
+2. **GitLab CI/CD**: Может использовать файл `.gitlab-ci.yml` для запуска тестов.
+3. **Travis CI**: Может использовать файл `.travis.yml` для запуска тестов.
+4. **CircleCI**: Может использовать файл `.circleci/config.yml` для запуска тестов.
+5. **Jenkins**: Может использовать файл `Jenkinsfile` для запуска тестов.
+
+Если вы знаете конкретную CI-систему, которую использует этот проект, то можно предоставить более конкретный ответ. В противном случае, можно предположить, что это `make test` используется для запуска тестов в рамках одной из этих CI-систем.
+Saved: results/baseline_t0.8_43.json
+
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode system --output results/system_t0.8.json
+В предоставленных материалах нет ответа
+Saved: results/system_t0.8.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode system --output results/system_t0.8.json
+В предоставленных материалах нет ответа
+Saved: results/system_t0.8.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode system --output results/system_t0.8_44.json
+В предоставленных материалах нет ответа
+Saved: results/system_t0.8_44.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ python3 experiment.py --mode baseline --output results/baseline_t0.8_44.json
+В данном случае, CI-система обычно будет запускать тесты проекта после каждого изменения, чтобы убедиться, что изменения не нарушают существующую функциональность. CI-система (Continuous Integration) автоматизированная система, которая проверяет код после каждого изменения и выполняет тесты.
+
+Вам не нужно явно устанавливать CI-систему для запуска тестов, потому что это будет частью CI-системы. Например, CI-система может быть установленной на вашей платформе, например, на Jenkins, GitHub Actions, GitLab CI или CircleCI.
+
+Для вашего проекта, если вы используете GitHub Actions, это будет выглядеть примерно так:
+
+```yaml
+# .github/workflows/test.yml
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run tests
+      run: make test
+```
+
+Это пример workflow в файле `.github/workflows/test.yml`, который будет запускать тесты после каждого изменения в ветке `main`. 
+
+Вы можете настроить это в соответствии с вашей конкретной инфраструктурой или используемой CI-системой. Помните, что CI-система работает на основе вашей инфраструктуры и может включать дополнительные шаги, такие как сборка, деплои, проверка, и другие.
+Saved: results/baseline_t0.8_44.json
+artur@DESKTOP-BM9PSL0:~/ITMOv2/practices/practice_03/lab$ 

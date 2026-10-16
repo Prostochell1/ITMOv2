@@ -1,0 +1,61 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Как запустить проверку артефактов Практики 1?",
+      "gold": {
+        "answer": "make test — practices/practice_01/README.md:188-191; practices/practice_03/lab/demo/README.md:6",
+        "evidence": [
+          {"file": "practices/practice_01/README.md", "line": 188, "note": "Инструкция make test"},
+          {"file": "practices/practice_03/lab/demo/README.md", "line": 6, "note": "Проверка: make test"}
+        ],
+        "explain": "README Практики 1 явным образом предлагает make test; в демо к Практике 3 эта же команда указана как проверка."
+      }
+    },
+    {
+      "id": "q2",
+      "text": "Какие файлы проверяет цель make test в Практике 1?",
+      "gold": {
+        "answer": "ARTIFACTS: context.md, problem.md, analysis.md, product_management.md, project_management.md, adr.md, tests_unit.md, tests_integration.md, tests_load.md, tests_e2e.md, prompts.md — practices/practice_01/Makefile:3-14; проверки содержимого — :16-28",
+        "evidence": [
+          {"file": "practices/practice_01/Makefile", "line": 3, "note": "ARTIFACTS список"},
+          {"file": "practices/practice_01/Makefile", "line": 16, "note": "Цель test и проверки"}
+        ],
+        "explain": "Makefile содержит список артефактов и проверки наличия/разделов."
+      }
+    },
+    {
+      "id": "q4",
+      "text": "В каком разделе зафиксированы метрики проекта?",
+      "gold": {
+        "answer": "problem.md — раздел \"## Метрики\" — practices/practice_01/problem.md:13-21",
+        "evidence": [
+          {"file": "practices/practice_01/problem.md", "line": 13, "note": "## Метрики"}
+        ],
+        "explain": "Раздел с таблицей метрик расположен в problem.md."
+      }
+    },
+    {
+      "id": "q5",
+      "text": "Какая CI‑система настроена для запуска тестов?",
+      "gold": {
+        "answer": "В репозитории нет ответа — отсутствуют конфигурации CI и конкретные указания — practices/practice_03/lab/demo/README.md:6 (есть лишь команда make test)",
+        "evidence": [
+          {"file": "practices/practice_03/lab/demo/README.md", "line": 6, "note": "Команда make test без указания CI"}
+        ],
+        "explain": "Нет файлов CI (.github/workflows, .gitlab-ci.yml и т.п.) и прямых упоминаний конкретной системы."
+      }
+    },
+    {
+      "id": "q6",
+      "text": "В Makefile Практики 1 явно вызывается pytest — в какой строке?",
+      "gold": {
+        "answer": "Предпосылка ложная: в practices/practice_01/Makefile нет вызова pytest — см. строки 16–28",
+        "evidence": [
+          {"file": "practices/practice_01/Makefile", "line": 16, "note": "Определение цели test без pytest"}
+        ],
+        "explain": "Цель test проверяет артефакты и разделы, но не запускает pytest."
+      }
+    }
+  ]
+}

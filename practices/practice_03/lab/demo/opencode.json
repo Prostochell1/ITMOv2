@@ -7,14 +7,14 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama local",
       "options": {
-        "baseURL": "http://localhost:11434/v1"
+          "baseURL": "http://localhost:11434/v1"
       },
       "models": {
         "itmo-agent": {
           "name": "ITMO local 64k",
           "limit": {
-            "context": 65536,
-            "output": 4096
+            "context": 32768,
+            "output": 1024
           }
         }
       }
@@ -24,15 +24,22 @@
     "local-guide": {
       "description": "Read-only local repository assistant",
       "mode": "primary",
-      "prompt": "{file:./repo-system.txt}",
-      "steps": 8,
+      "prompt": "{file:../../../../repo-system-A.txt}",
+      "steps": 5,
       "permission": {
         "*": "deny",
-        "read": "allow",
-        "glob": "allow",
-        "grep": "allow"
+        "read": "allow"
+      }
+    },
+    "local-guide-b": {
+      "description": "Read-only assistant (B prompt)",
+      "mode": "primary",
+      "prompt": "{file:../../../../repo-system-B.txt}",
+      "steps": 5,
+      "permission": {
+        "*": "deny",
+        "read": "allow"
       }
     }
   }
 }
-

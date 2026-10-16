@@ -1,0 +1,84 @@
+{
+  "evaluations": [
+    {
+      "question": "q1",
+      "variant": "A",
+      "file": "q1.A.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q1",
+      "variant": "B",
+      "file": "q1.B.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q2",
+      "variant": "A",
+      "file": "q2.A.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q2",
+      "variant": "B",
+      "file": "q2.B.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q4",
+      "variant": "A",
+      "file": "q4.A.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q4",
+      "variant": "B",
+      "file": "q4.B.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q5",
+      "variant": "A",
+      "file": "q5.A.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q5",
+      "variant": "B",
+      "file": "q5.B.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q6",
+      "variant": "A",
+      "file": "q6.A.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    },
+    {
+      "question": "q6",
+      "variant": "B",
+      "file": "q6.B.jsonl",
+      "answer_present": false,
+      "answer_preview": null,
+      "read_calls": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "# Notify Mini\nУчебный сервис подписки. Подписчики хранятся в памяти процесса.\nВ service.py функция subscribe добавляет непустое имя в множество.\nПовторное добавление имени не создаёт дубликат.\n\nПроверка: make test.\nЗависимости: стандартная библиотека Python 3.10+.\n\n\nКакая CI-система запускает тесты проекта?"
+      }
+    ],
+    "stream": false,
+    "think": false,
+    "options": {
+      "temperature": 0.2,
+      "seed": 41,
+      "num_ctx": 4096,
+      "num_predict": 512
+    }
+  },
+  "response": {
+    "model": "qwen2.5:3b",
+    "created_at": "2026-10-10T20:57:03.621602199Z",
+    "message": {
+      "role": "assistant",
+      "content": "В данном случае, CI-система будет запускать тесты проекта, если он настроен для автоматической проверки кода. Для этого обычно используется CI-система, например, GitHub Actions, GitLab CI, Jenkins, или Travis CI.\n\nВаш проект использует команду `make test` для запуска тестов. Это означает, что обычно CI-система будет запускать команду `make test` для запуска тестов при каждом запуске CI-процесса.\n\nТаким образом, если ваш проект настроен на CI-систему, например, на GitHub Actions, GitLab CI, или другую систему, она будет запускать команду `make test` для запуска тестов вашего проекта.\n\nПример настройки CI-системы на GitHub Actions:\n\n```yaml\n# .github/workflows/test.yml\nname: Test\n\non:\n  push:\n    branches:\n      - main\n  pull_request:\n    branches:\n      - main\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout code\n        uses: actions/checkout@v2\n      - name: Setup Python\n        uses: actions/setup-python@v2\n        with:\n          python-version: '3.10'\n      - name: Install dependencies\n        run: pip install -r requirements.txt\n      - name: Run tests\n        run: make test\n```\n\nЭтот пример настройки CI-системы на GitHub Actions запускает тесты вашего проекта при каждом push на основную ветку и при каждом pull request. \n\nОбратите внимание, что вам нужно будет установить зависимости вашего проекта (например, `requirements.txt`) и установить Python 3.10, если он не установлен по умолчанию на вашей CI-системе."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 50150575163,
+    "load_duration": 10576557,
+    "prompt_eval_count": 130,
+    "prompt_eval_cached_count": 129,
+    "prompt_eval_duration": 1019531000,
+    "eval_count": 405,
+    "eval_duration": 49044235000
+  },
+  "wall_seconds": 50.17440651100151,
+  "load_seconds": 0.010576557,
+  "total_seconds": 50.150575163,
+  "decode_tokens_per_second": 8.25785130505145
+}

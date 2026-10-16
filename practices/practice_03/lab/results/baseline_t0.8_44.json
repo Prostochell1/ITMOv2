@@ -1,0 +1,40 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "# Notify Mini\nУчебный сервис подписки. Подписчики хранятся в памяти процесса.\nВ service.py функция subscribe добавляет непустое имя в множество.\nПовторное добавление имени не создаёт дубликат.\n\nПроверка: make test.\nЗависимости: стандартная библиотека Python 3.10+.\n\n\nКакая CI-система запускает тесты проекта?"
+      }
+    ],
+    "stream": false,
+    "think": false,
+    "options": {
+      "temperature": 0.8,
+      "seed": 44,
+      "num_ctx": 4096,
+      "num_predict": 512
+    }
+  },
+  "response": {
+    "model": "qwen2.5:3b",
+    "created_at": "2026-09-25T07:48:19.921835444Z",
+    "message": {
+      "role": "assistant",
+      "content": "В данном случае, CI-система обычно будет запускать тесты проекта после каждого изменения, чтобы убедиться, что изменения не нарушают существующую функциональность. CI-система (Continuous Integration) автоматизированная система, которая проверяет код после каждого изменения и выполняет тесты.\n\nВам не нужно явно устанавливать CI-систему для запуска тестов, потому что это будет частью CI-системы. Например, CI-система может быть установленной на вашей платформе, например, на Jenkins, GitHub Actions, GitLab CI или CircleCI.\n\nДля вашего проекта, если вы используете GitHub Actions, это будет выглядеть примерно так:\n\n```yaml\n# .github/workflows/test.yml\nname: Test\n\non:\n  push:\n    branches: [ main ]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v2\n    - name: Setup Python\n      uses: actions/setup-python@v2\n      with:\n        python-version: '3.10'\n    - name: Install dependencies\n      run: pip install -r requirements.txt\n    - name: Run tests\n      run: make test\n```\n\nЭто пример workflow в файле `.github/workflows/test.yml`, который будет запускать тесты после каждого изменения в ветке `main`. \n\nВы можете настроить это в соответствии с вашей конкретной инфраструктурой или используемой CI-системой. Помните, что CI-система работает на основе вашей инфраструктуры и может включать дополнительные шаги, такие как сборка, деплои, проверка, и другие."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 85294723417,
+    "load_duration": 13468741,
+    "prompt_eval_count": 130,
+    "prompt_eval_cached_count": 129,
+    "prompt_eval_duration": 230437000,
+    "eval_count": 380,
+    "eval_duration": 84971467000
+  },
+  "wall_seconds": 85.32528996600013,
+  "load_seconds": 0.013468741,
+  "total_seconds": 85.294723417,
+  "decode_tokens_per_second": 4.472089436798825
+}

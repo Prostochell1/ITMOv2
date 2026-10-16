@@ -1,0 +1,40 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "# Notify Mini\nУчебный сервис подписки. Подписчики хранятся в памяти процесса.\nВ service.py функция subscribe добавляет непустое имя в множество.\nПовторное добавление имени не создаёт дубликат.\n\nПроверка: make test.\nЗависимости: стандартная библиотека Python 3.10+.\n\n\nКакая CI-система запускает тесты проекта?"
+      }
+    ],
+    "stream": false,
+    "think": false,
+    "options": {
+      "temperature": 0.8,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 512
+    }
+  },
+  "response": {
+    "model": "qwen2.5:3b",
+    "created_at": "2026-09-25T07:41:42.973620902Z",
+    "message": {
+      "role": "assistant",
+      "content": "В данном контексте, CI-система (Continuous Integration) автоматически запускает тесты (make test) при попытке добавления или изменения кода в проекте. Для этого можно использовать различные CI-системы, такие как GitHub Actions, Jenkins, CircleCI и т.д.\n\nВаш проект использует команду `make test`, которая вызывает тесты. Это означает, что для запуска тестов проекта на CI-системе нужно будет сначала установить зависимости проекта (например, с помощью команды `pip install -r requirements.txt`), а затем вызвать команду `make test`.\n\nТаким образом, CI-система (например, GitHub Actions) будет автоматически запускать команду `make test` при каждом обновлении кода в ветке master/develop. Это позволит быстро обнаруживать и обходить проблемы, которые могут возникнуть из-за неправильных коммитов или модификаций кода.\n\nДля конкретного примера, в проекте можно настроить CI-систему следующим образом:\n\n1. Установить зависимости проекта: `pip install -r requirements.txt`\n2. Вызвать команду для запуска тестов: `make test`\n\nТеперь, чтобы запустить CI-систему на конкретном проекте, нужно будет настроить автоматическую проверку на CI-системе. Например, в GitHub Actions это может выглядеть следующим образом:\n\n```yaml\n# .github/workflows/test.yml\nname: Test\n\non:\n  push:\n    branches: [ master ]\n\njobs:\n  test_job:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Setup Python\n        uses: actions/setup-python@v2\n        with:\n          python-version: '3.10'\n      - name: Install dependencies\n        run: pip install -r requirements.txt\n      - name: Run tests\n        run: make test\n```\n\nТаким образом, каждое изменение в ветке `master` будет автоматически запускать команду `make test` с установленными зависимостями.\n\nТаким образом, CI-система будет выполнять тесты проекта, запуская команду `make test`, чтобы обеспечить стабильность и соответствие"
+    },
+    "done": true,
+    "done_reason": "length",
+    "total_duration": 107231193460,
+    "load_duration": 10327235,
+    "prompt_eval_count": 130,
+    "prompt_eval_cached_count": 129,
+    "prompt_eval_duration": 302178000,
+    "eval_count": 512,
+    "eval_duration": 106723798000
+  },
+  "wall_seconds": 107.28095235699993,
+  "load_seconds": 0.010327235,
+  "total_seconds": 107.23119346,
+  "decode_tokens_per_second": 4.797430466258332
+}

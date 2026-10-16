@@ -1,0 +1,280 @@
+{
+  "runs": {
+    "q1": {
+      "A": [
+        {
+          "file": "q1.r1.A.jsonl",
+          "wall_seconds": 84.655,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q1.r3.A.jsonl",
+          "wall_seconds": 85.861,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q1.r2.A.jsonl",
+          "wall_seconds": 84.627,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ],
+      "B": [
+        {
+          "file": "q1.r2.B.jsonl",
+          "wall_seconds": 87.503,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q1.r1.B.jsonl",
+          "wall_seconds": 87.389,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q1.r3.B.jsonl",
+          "wall_seconds": 83.804,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ]
+    },
+    "q2": {
+      "A": [
+        {
+          "file": "q2.r1.A.jsonl",
+          "wall_seconds": 87.931,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q2.r3.A.jsonl",
+          "wall_seconds": null,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q2.r2.A.jsonl",
+          "wall_seconds": 82.217,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ],
+      "B": [
+        {
+          "file": "q2.r2.B.jsonl",
+          "wall_seconds": 81.11,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q2.r1.B.jsonl",
+          "wall_seconds": null,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q2.r3.B.jsonl",
+          "wall_seconds": 81.981,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ]
+    },
+    "q4": {
+      "B": [
+        {
+          "file": "q4.r1.B.jsonl",
+          "wall_seconds": null,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q4.r3.B.jsonl",
+          "wall_seconds": 88.07,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q4.r2.B.jsonl",
+          "wall_seconds": 88.055,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ],
+      "A": [
+        {
+          "file": "q4.r1.A.jsonl",
+          "wall_seconds": 87.115,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q4.r3.A.jsonl",
+          "wall_seconds": 80.352,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q4.r2.A.jsonl",
+          "wall_seconds": 86.295,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ]
+    },
+    "q6": {
+      "A": [
+        {
+          "file": "q6.r3.A.jsonl",
+          "wall_seconds": 85.275,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q6.r2.A.jsonl",
+          "wall_seconds": 84.632,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q6.r1.A.jsonl",
+          "wall_seconds": 80.514,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ],
+      "B": [
+        {
+          "file": "q6.r1.B.jsonl",
+          "wall_seconds": 89.53,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q6.r3.B.jsonl",
+          "wall_seconds": 88.382,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q6.r2.B.jsonl",
+          "wall_seconds": 88.936,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ]
+    },
+    "q5": {
+      "A": [
+        {
+          "file": "q5.r3.A.jsonl",
+          "wall_seconds": 83.724,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q5.r2.A.jsonl",
+          "wall_seconds": 89.044,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q5.r1.A.jsonl",
+          "wall_seconds": 81.834,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ],
+      "B": [
+        {
+          "file": "q5.r1.B.jsonl",
+          "wall_seconds": 91.285,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q5.r2.B.jsonl",
+          "wall_seconds": 87.148,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        },
+        {
+          "file": "q5.r3.B.jsonl",
+          "wall_seconds": 88.376,
+          "total_seconds": null,
+          "decode_tokens_per_second": null
+        }
+      ]
+    }
+  },
+  "medians": {
+    "q1": {
+      "A": {
+        "wall_seconds_median": 84.655,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      },
+      "B": {
+        "wall_seconds_median": 87.389,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      }
+    },
+    "q2": {
+      "A": {
+        "wall_seconds_median": 85.074,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      },
+      "B": {
+        "wall_seconds_median": 81.5455,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      }
+    },
+    "q4": {
+      "B": {
+        "wall_seconds_median": 88.0625,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      },
+      "A": {
+        "wall_seconds_median": 86.295,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      }
+    },
+    "q6": {
+      "A": {
+        "wall_seconds_median": 84.632,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      },
+      "B": {
+        "wall_seconds_median": 88.936,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      }
+    },
+    "q5": {
+      "A": {
+        "wall_seconds_median": 83.724,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      },
+      "B": {
+        "wall_seconds_median": 88.376,
+        "total_seconds_median": null,
+        "decode_tokens_per_second_median": null
+      }
+    }
+  },
+  "units": {
+    "time": "seconds",
+    "speed": "tokens/second"
+  }
+}
