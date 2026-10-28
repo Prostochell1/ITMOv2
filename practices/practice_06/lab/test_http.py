@@ -42,7 +42,7 @@ class HttpTest(unittest.TestCase):
         status, _, body = self.call("POST", "/login", {"username": "alice", "password": "learn-alice"})
         self.assertEqual(status, 200)
         token = json.loads(body)["token"]
-        status, headers, body = self.call("POST", "/orders", {"product": "chair"}, {"X-Token": token})
+        status, headers, body = self.call("POST", "/orders", {"product": "chair", "price": 1}, {"X-Token": token})
         self.assertEqual(status, 201)
         self.assertIn("application/json", headers["Content-Type"])
         self.assertEqual(json.loads(body)["price"], 5000)
@@ -54,6 +54,14 @@ class HttpTest(unittest.TestCase):
 
     def test_transport_only_binds_loopback(self):
         self.assertEqual(self.server.server_address[0], "127.0.0.1")
+
+    def test_admin_export_requires_staff_over_http(self):
+        # login as staff and call admin/export, ensure 200
+        status, _, body = self.call("POST", "/login", {"username": "staff", "password": "learn-staff"})
+        self.assertEqual(status, 200)
+        token = json.loads(body)["token"]
+        status, _, body = self.call("GET", "/admin/export", headers={"X-Token": token})
+        self.assertEqual(status, 200)
 
 
 if __name__ == "__main__":

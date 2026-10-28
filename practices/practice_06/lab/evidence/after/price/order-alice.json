@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8066/orders",
+    "headers": {
+      "Accept": "application/json",
+      "User-Agent": "mini-dumper/1.0",
+      "X-Token": "06daa3d918044221822038b354475eb4",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "product": "lamp",
+      "price": 1
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Server": "BaseHTTP/0.6 Python/3.14.4",
+      "Date": "Wed, 28 Oct 2026 23:05:01 GMT",
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "52"
+    },
+    "body": "{\"id\": 7, \"owner\": 1, \"product\": \"lamp\", \"price\": 1}"
+  }
+}

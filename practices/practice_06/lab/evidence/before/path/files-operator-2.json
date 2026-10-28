@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-28T22:30:54.580558+00:00",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:8066/files?user=alice&path=../../private/operator-note.txt",
+    "headers": {
+      "Accept": "application/json",
+      "User-Agent": "mini-dumper/1.0",
+      "Host": "127.0.0.1:8066"
+    },
+    "body": null
+  },
+  "response": {
+    "status": null,
+    "headers": {},
+    "body": "HTTP Error 500: Internal Server Error",
+    "error": "HTTPError"
+  }
+}

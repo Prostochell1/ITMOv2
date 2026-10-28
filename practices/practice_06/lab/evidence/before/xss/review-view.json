@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-28T22:29:53.963823+00:00",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:8066/reviews/view",
+    "headers": {
+      "Accept": "application/json",
+      "User-Agent": "mini-dumper/1.0",
+      "Content-Type": "application/json",
+      "Host": "127.0.0.1:8066"
+    },
+    "body": {
+      "X-Token": "8c169c84748c4625b215129442e88266"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Server": "BaseHTTP/0.6 Python/3.14.4",
+      "Date": "Wed, 28 Oct 2026 22:29:53 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Content-Length": "62"
+    },
+    "body": "<html><body><p><script>alert('xss')</script></p></body></html>"
+  }
+}
