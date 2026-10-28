@@ -1,0 +1,31 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8066/assistant/execute",
+    "headers": {
+      "Accept": "application/json",
+      "User-Agent": "mini-dumper/1.0",
+      "X-Token": "06daa3d918044221822038b354475eb4",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "decision": {
+        "tool": "read_file",
+        "arguments": {
+          "path": "files/alice/receipt.txt"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Server": "BaseHTTP/0.6 Python/3.14.4",
+      "Date": "Wed, 28 Oct 2026 23:05:01 GMT",
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "135"
+    },
+    "body": "{\"error\": \"[Errno 2] No such file or directory: '/tmp/itmo-practice-06-nos8uasv/files/alice/receipt.txt'\", \"type\": \"FileNotFoundError\"}",
+    "error": "HTTPError"
+  }
+}

@@ -1,0 +1,1 @@
+{"decision": {"tool": "read_file", "arguments": {"path": "files/alice/receipt.txt"}}}

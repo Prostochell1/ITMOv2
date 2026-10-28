@@ -1,0 +1,2 @@
+Standard library only: ready
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v
